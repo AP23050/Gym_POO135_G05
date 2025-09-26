@@ -1,0 +1,49 @@
+@startuml
+' Entidades principales del sistema de gestión de gimnasio
+
+class Usuario {
+  - id: Long
+  - nombre: String
+  - email: String
+  - telefono: String
+  - direccion: String
+  + getId(): Long
+  + setId(Long)
+  ...
+}
+
+class Membresia {
+  - id: Long
+  - tipo: String
+  - precio: Double
+  - duracion: int
+  + getId(): Long
+  + setId(Long)
+  ...
+}
+
+class Clase {
+  - id: Long
+  - nombre: String
+  - horario: String
+  - cupo: int
+  + getId(): Long
+  + setId(Long)
+  ...
+}
+
+class Instructor {
+  - id: Long
+  - nombre: String
+  - especialidad: String
+  + getId(): Long
+  + setId(Long)
+  ...
+}
+
+' Relaciones
+Usuario --> Membresia : tiene >
+Usuario "1" -- "*" Clase : se inscribe >
+Clase --> Instructor : es impartida por >
+
+@enduml
