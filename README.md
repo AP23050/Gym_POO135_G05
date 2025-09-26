@@ -30,7 +30,7 @@ Este proyecto es una API REST creada con Spring Boot que permite gestionar un gi
 
 ## Integrantes del equipo(Acá iría la dirección en git de cada uno)
 
-- [@usuario1](https://github.com/usuario1)
+- (https://github.com/CesarCA07001)
 - [@usuario2](https://github.com/usuario2)
 - [@usuario3](https://github.com/usuario3)
 
