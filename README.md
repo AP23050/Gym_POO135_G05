@@ -28,15 +28,21 @@ Este proyecto es una API REST creada con Spring Boot que permite gestionar un gi
 - Crear clases e inscribir usuarios
 - Registrar instructores y asignarlos a clases
 
-## Integrantes del equipo(Acá iría la dirección en git de cada uno)
+## Integrantes del equipo.
 
-- @CesarCA07001(https://github.com/CesarCA07001)
-- [@MH24055-JosueHernandez](https://github.com/MH24055-JosueHernandez)
-- [@usuario3](https://github.com/usuario3)
-- CH20039- Lidia Cruz(https://github.com/CH20039)
-- @MF23004-Esmeralda Muñoz (https://github.com/MF23004)
-  
-
+-
+[@AP23050-Rodrigo Alvarado] (https://github.com/AP23050)
+- 
+[@CesarCA07001]
+(https://github.com/CesarCA07001)
+- 
+[@MH24055-JosueHernandez]
+(https://github.com/MH24055)
+-
+CH20039- Lidia Cruz (https://github.com/CH20039)
+- 
+@MF23004-Esmeralda Muñoz (https://github.com/MF23004)
+-
 ## Cómo ejecutar
 
 ./mvnw spring-boot:run
