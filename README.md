@@ -33,6 +33,8 @@ Este proyecto es una API REST creada con Spring Boot que permite gestionar un gi
 - @CesarCA07001(https://github.com/CesarCA07001)
 - [@MH24055-JosueHernandez](https://github.com/MH24055-JosueHernandez)
 - [@usuario3](https://github.com/usuario3)
+- CH20039- Lidia Cruz(https://github.com/CH20039)
+  
 
 ## Cómo ejecutar
 
