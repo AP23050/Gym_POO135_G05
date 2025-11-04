@@ -1,0 +1,33 @@
+@startuml
+left to right direction
+
+actor Admin
+actor Usuario
+
+rectangle "Sistema de Gestión de Gimnasio" {
+    (Registrar Usuario) as CU01
+    (Consultar Usuarios) as CU02
+    (Eliminar Usuario) as CU03
+    (Crear Membresía) as CU04
+    (Asignar Membresía) as CU05
+    (Registrar Clase) as CU06
+    (Inscribir a Clase) as CU07
+    (Registrar Instructor) as CU08
+    (Asignar Instructor a Clase) as CU09
+    (Consultar Clases) as CU10
+}
+
+Admin --> CU01
+Admin --> CU02
+Admin --> CU03
+Admin --> CU04
+Admin --> CU05
+Admin --> CU06
+Admin --> CU08
+Admin --> CU09
+Admin --> CU10
+
+Usuario --> CU07
+Usuario --> CU10
+
+@enduml
