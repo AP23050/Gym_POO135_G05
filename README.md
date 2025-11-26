@@ -1,48 +1,47 @@
-# Gestión de Gimnasio
+# 🏋️‍♂️ Sistema de Gestión de Gimnasio (API REST)
 
-Este proyecto es una API REST creada con Spring Boot que permite gestionar un gimnasio, incluyendo:
+Este proyecto es una API REST desarrollada con **Spring Boot** para la administración integral de un gimnasio. El sistema permite gestionar el registro de usuarios, la administración de instructores y el control de membresías, utilizando una arquitectura en capas y buenas prácticas de desarrollo.
 
-- Registro de usuarios
-- Membresías
-- Clases
-- Instructores
+---
 
-## Tecnologías utilizadas
+## 👥 Integrantes del Equipo (Grupo 05)
 
-- Java 17
-- Spring Boot
-- Spring Data JPA
-- Maven / Gradle
-- H2 / MySQL (base de datos)
+* **Rodrigo Antonio Alvarado Perez** - [@AP23050](https://github.com/AP23050)
+* **Cesar Castro** - [@CesarCA07001](https://github.com/CesarCA07001)
+* **Josue Hernandez** - [@MH24055-JosueHernandez](https://github.com/MH24055)
+* **Lidia Cruz** - [@CH20039](https://github.com/CH20039)
+* **Esmeralda Muñoz** - [@MF23004](https://github.com/MF23004)
 
-## Estructura de la API
+---
 
-- /api/usuarios: Gestión de usuarios
-- /api/membresias: Gestión de membresías
-- /api/clases: Gestión de clases
-- /api/instructores: Gestión de instructores
+## 🚀 Tecnologías Utilizadas
 
-## Casos de uso principales
+* **Java 17** (Lenguaje principal)
+* **Spring Boot 3** (Framework para desarrollo web)
+* **Spring Data JPA** (Persistencia de datos)
+* **PostgreSQL** (Motor de Base de Datos)
+* **Lombok** (Para reducción de código repetitivo)
+* **Maven** (Gestión de dependencias)
+* **JUnit 5 & Mockito** (Pruebas Unitarias)
 
-- Registrar usuario y asignar membresía
-- Crear clases e inscribir usuarios
-- Registrar instructores y asignarlos a clases
+---
 
-## Integrantes del equipo.
+## ⚙️ Instrucciones de Ejecución
 
--
-[@AP23050-Rodrigo Alvarado] (https://github.com/AP23050)
-- 
-[@CesarCA07001]
-(https://github.com/CesarCA07001)
-- 
-[@MH24055-JosueHernandez]
-(https://github.com/MH24055)
--
-CH20039- Lidia Cruz (https://github.com/CH20039)
-- 
-@MF23004-Esmeralda Muñoz (https://github.com/MF23004)
--
-## Cómo ejecutar
+Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
-./mvnw spring-boot:run
+### 1. Prerrequisitos
+* Tener instalado Java 17.
+* Tener instalado PostgreSQL y pgAdmin.
+* Tener un cliente API como Postman.
+
+### 2. Configuración de la Base de Datos
+1. Abrir pgAdmin.
+2. Crear una nueva base de datos llamada: **`gimnasio`**.
+3. En el proyecto, abrir el archivo `src/main/resources/application.properties`.
+4. Verificar que el puerto (`2603` o `5432`) y la contraseña coincidan con tu instalación local de PostgreSQL.
+
+### 3. Ejecutar la Aplicación
+* Desde la terminal:
+  ```bash
+  ./mvnw spring-boot:run

@@ -2,8 +2,8 @@ package com.gimnasio.controller;
 
 import com.gimnasio.model.Usuario;
 import com.gimnasio.service.UsuarioService;
-import jakarta.validation.Valid;
-import org.springframework.http.ResponseEntity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity; // ¡Importante para DELETE!
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,31 +12,40 @@ import java.util.List;
 @RequestMapping("/api/usuarios")
 public class UsuarioController {
 
-    private final UsuarioService usuarioService;
+    @Autowired
+    private UsuarioService usuarioService;
 
-    public UsuarioController(UsuarioService usuarioService) {
-        this.usuarioService = usuarioService;
-    }
-
-    @GetMapping
-    public ResponseEntity<List<Usuario>> obtenerTodos() {
-        return ResponseEntity.ok(usuarioService.obtenerTodos());
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<Usuario> obtenerPorId(@PathVariable Long id) {
-        return ResponseEntity.ok(usuarioService.obtenerPorId(id));
-    }
-
+    // Endpoint para CREAR un nuevo usuario
     @PostMapping
-    public ResponseEntity<Usuario> crear(@Valid @RequestBody Usuario usuario) {
-        Usuario nuevo = usuarioService.guardar(usuario);
-        return ResponseEntity.ok(nuevo);
+    public Usuario crear(@RequestBody Usuario usuario) {
+        return usuarioService.guardar(usuario);
     }
 
+    // Endpoint para LEER todos los usuarios
+    @GetMapping
+    public List<Usuario> obtenerTodos() {
+        return usuarioService.obtenerTodos();
+    }
+
+    // --- NUEVOS ENDPOINTS ---
+
+    // Endpoint para LEER un solo usuario por ID
+    @GetMapping("/{id}")
+    public Usuario obtenerUsuarioPorId(@PathVariable Long id) {
+        return usuarioService.obtenerUsuarioPorId(id);
+    }
+
+    // Endpoint para ACTUALIZAR un usuario
+    @PutMapping("/{id}")
+    public Usuario actualizarUsuario(@PathVariable Long id, @RequestBody Usuario detallesUsuario) {
+        return usuarioService.actualizarUsuario(id, detallesUsuario);
+    }
+
+    // Endpoint para BORRAR un usuario
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
-        usuarioService.eliminar(id);
+        usuarioService.eliminarUsuario(id);
+        // Devolvemos una respuesta 204 No Content (éxito sin cuerpo)
         return ResponseEntity.noContent().build();
     }
 }
